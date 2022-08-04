@@ -1,0 +1,344 @@
+body {
+    margin: 0;
+}
+
+body * {
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+}
+
+#root {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header,
+footer {
+    width: 100%;
+}
+
+section {
+    flex-grow: 1;
+    width: 100%;
+}
+img {
+    max-width: 100%;
+}
+
+/* #region Header */
+header {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.nav ul {
+    padding-left: 0;
+}
+
+.nav li {
+    display: inline-block;
+    margin: 0 3rem;
+}
+
+.nav li a {
+    color: #000;
+    font-weight: 700;
+    font-size: 1rem;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.nav li a:hover {
+    color: #f36333;
+}
+/* #endregion Header */
+
+/* #region Heading */
+.heading .content {
+    padding-right: 1rem;
+    padding-left: 1rem;
+    text-align: center;
+}
+
+.heading h1 {
+    font-size: 1.8rem;
+}
+
+.heading p {
+    line-height: 1.5;
+}
+/* #endregion Heading */
+
+/* #region Tiles */
+.tiles .item {
+    text-align: center;
+}
+
+.tiles-btn {    
+    display: flex;
+    margin: auto;
+    border: none;
+    padding: 1rem 2rem;
+    width: 18rem;
+    max-width: 100%;
+    background: #000;
+    color: #fff;
+    font-weight: 700;
+    font-size: 1em;
+    cursor: pointer;
+    transition: all 0.3s;
+    justify-content: center;
+}
+
+.tiles-btn:hover {
+    color: #000;
+    background: #f36333;
+}
+/* #endregion Tiles */
+
+/* #region Footer */ 
+footer {
+    margin-top: 2rem;
+    background: #ccc;
+    align-self: flex-end;
+}
+
+.footer-content {
+    border-bottom: 1px solid #000;
+}
+
+.footer-logo {
+    text-align: center;
+}
+
+.branding .title {
+    display: block;
+    margin-bottom: 1rem;
+    font-weight: 700;
+    font-size: 1.25rem;
+}
+
+.branding .description {
+    display: block;
+    line-height: 1.5;
+}
+
+.socials a {
+    display: inline-block;
+    margin: 0.5rem;
+    width: 34px;
+    height: 34px;
+    font-size: 0;
+    transition: all 0.3s;
+}
+
+.facebook {
+    background: url(./images/facebook.png) no-repeat center center;
+    background-size: contain;
+}
+
+.twitter {
+    background: url(./images/twitter.png) no-repeat center center;
+    background-size: contain;
+}
+
+.linkedin {
+    background: url(./images/linkedin.png) no-repeat center center;
+    background-size: contain;
+}
+
+.google {
+    background: url(./images/google.png) no-repeat center center;
+    background-size: contain;
+}
+
+.socials a:hover {
+    opacity: 0.5;
+}
+/* #endregion Footer */
+
+/* #region Copyright */
+.copyright {
+    display: inline-block;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    width: 100%;
+    text-align: center;
+}
+/* #endregion Copyright */
+
+/* #region media queries */
+@media (max-width: 991px) {    
+    body {
+        font-size: 14px;
+    }
+    header {
+        text-align: center;
+    }
+    .nav {
+        margin-top: 2rem;
+    }
+    .tiles {
+        margin-top: 2rem;
+        padding-right: 1rem;
+        padding-left: 1rem;
+    }
+    .tiles .item {
+        margin-bottom: 2rem;
+    }
+    .footer-content {
+        padding: 1.5rem 1rem;
+        text-align: center;
+    }
+    .footer-logo {
+        margin: 1rem 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo-box img {
+        width: 6.5rem;
+    }
+    .nav li {
+        margin: 0 1.5rem;
+    }
+    .tiles-btn {
+        width: 15rem;
+    }
+}
+
+@media (min-width: 992px) {        
+    header {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+    }
+    .logo-box {
+        width: 30%;
+        text-align: center;
+    }
+    .nav {
+        width: 70%;
+    }
+    .nav li {
+        margin: 0 8%;
+    } 
+    .heading {
+        position: relative;
+    }
+    .heading .content {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        display: flex;
+        flex-wrap: wrap;
+        align-content: center;
+        padding-right: 5%;
+        padding-left: 15%;
+        width: 60%;
+        background: linear-gradient(to right, rgba(255,255,255,0) 0, rgba(255,255,255,0.7) 20%, rgba(255,255,255,1) 100%);
+        text-align: right;
+    }
+    .heading h1 {
+        flex-grow: 1;
+        font-size: 3rem;
+    }
+    .heading p {
+        flex-grow: 1;
+    }
+    .tiles {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-top: 4rem;
+    }
+    .tiles .item {
+        margin: 2rem;
+        width: 25%;
+    }
+    .tiles-btn {
+        margin-top: 2rem;
+    }
+    footer {
+        margin-top: 5rem;
+        padding-right: 4%;
+        padding-left: 4%;
+    }  
+    .footer-content {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+    }
+    .branding,
+    .footer-logo {
+        width: 33.33%
+    }
+    .socials {
+        width: 33.33%;
+        text-align: right;
+    }
+}
+/* #endregion main queries */
+
+/* #region Catalog */
+.items-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+    width: 1300px;
+    max-width: 100%;
+}
+
+.items-wrapper .item {
+    display: flex;
+    flex-wrap: wrap;
+    border: 1px solid #ccc;
+    margin: 1%;
+    padding: 1rem;
+    width: 23%;
+}
+
+.items-wrapper .item * {
+    flex: 0 0 100%;
+}
+
+.item .name {
+    margin: 0.5rem 0;
+    font-weight: 700;
+}
+
+.item .price {
+    margin: 0.5rem 0;
+    color:#f36333;
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+.item-button {
+    display: inline-block;
+    margin-top: 1rem;
+    border: none;
+    padding: 0.75rem 1rem;
+    width: 10rem;
+    max-width: 100%;
+    background: #f36333;
+    color: #000;
+    font-weight: 700;
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s;
+    justify-content: center;
+}
+
+.item-button:hover {
+    background: #aaa;
+}
+/* #endregion Catalog */
