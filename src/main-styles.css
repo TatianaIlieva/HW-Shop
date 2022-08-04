@@ -169,6 +169,83 @@ footer {
 }
 /* #endregion Copyright */
 
+/* #region Catalog */
+.items-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+    width: 1300px;
+    max-width: 100%;
+    justify-content: center;
+}
+
+.items-wrapper .item {
+    display: flex;
+    flex-wrap: wrap;
+    border: 1px solid #ccc;
+    margin: 1%;
+    padding: 1rem;
+    width: 18.5rem;
+    max-width: 100%;
+}
+
+.items-wrapper .item * {
+    flex: 0 0 100%;
+}
+
+.item .name {
+    margin: 0.5rem 0;
+    font-weight: 700;
+}
+
+.item .price {
+    margin: 0.5rem 0;
+    color:#f36333;
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+.item-button {
+    display: inline-block;
+    margin-top: 1rem;
+    border: none;
+    padding: 0.75rem 1rem;
+    width: 10rem;
+    max-width: 100%;
+    background: #f36333;
+    color: #000;
+    font-weight: 700;
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s;
+    justify-content: center;
+}
+
+.item-button:hover {
+    background: #aaa;
+}
+/* #endregion Catalog */
+
+/* #region Details Page */
+.details-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 1rem auto;
+    padding: 0 1em;
+    width: 1300px;
+    max-width: 100%;
+    align-items: flex-start;
+}
+
+
+.details-info .price {
+    color: #f36333;
+    font-weight: 700;
+    font-size: 1.2em;
+}
+/* #endregion Details Page */
+
 /* #region media queries */
 @media (max-width: 991px) {    
     body {
@@ -194,6 +271,10 @@ footer {
     }
     .footer-logo {
         margin: 1rem 0;
+    }
+    .details-wrapper {
+        justify-content: center;
+        text-align: center;
     }
 }
 
@@ -284,61 +365,15 @@ footer {
         width: 33.33%;
         text-align: right;
     }
+    .details-wrapper {
+        margin-top: 3rem;
+        margin-bottom: 3rem;
+    }
+    .details-img {
+        flex: 0 0 30%;
+    }
+    .details-info {
+        flex: 0 0 70%;
+    }
 }
 /* #endregion main queries */
-
-/* #region Catalog */
-.items-wrapper {
-    display: flex;
-    flex-wrap: wrap;
-    margin: auto;
-    width: 1300px;
-    max-width: 100%;
-}
-
-.items-wrapper .item {
-    display: flex;
-    flex-wrap: wrap;
-    border: 1px solid #ccc;
-    margin: 1%;
-    padding: 1rem;
-    width: 23%;
-}
-
-.items-wrapper .item * {
-    flex: 0 0 100%;
-}
-
-.item .name {
-    margin: 0.5rem 0;
-    font-weight: 700;
-}
-
-.item .price {
-    margin: 0.5rem 0;
-    color:#f36333;
-    font-weight: 700;
-    font-size: 1.5rem;
-}
-
-.item-button {
-    display: inline-block;
-    margin-top: 1rem;
-    border: none;
-    padding: 0.75rem 1rem;
-    width: 10rem;
-    max-width: 100%;
-    background: #f36333;
-    color: #000;
-    font-weight: 700;
-    text-decoration: none;
-    text-align: center;
-    cursor: pointer;
-    transition: all 0.3s;
-    justify-content: center;
-}
-
-.item-button:hover {
-    background: #aaa;
-}
-/* #endregion Catalog */
