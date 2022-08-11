@@ -4,19 +4,19 @@ import {data} from "../data";
 
 export default function ProductDetail() {
     const {id} = useParams();
-    const thisProduct = data.filter(el => el.id === id);
+    const itemDetails = data.find(el => el.id === id);
     
     return (
         <div className='details-wrapper'>
             <div className='details-img'>
-                <img src={thisProduct[0].Image} alt={thisProduct[0].Name} />
+                <img src={itemDetails.Image} alt={itemDetails.Name} />
             </div>
             <div className='details-info'>
-                <h1>{thisProduct[0].Name}</h1>
-                <p className='price'>Price: ${thisProduct[0].Price}</p>
-                <p>{thisProduct[0].Department}</p>
-                <p>{thisProduct[0].Type}</p>
-                <p>{thisProduct[0].Description}</p>
+                <h1>{itemDetails.Name}</h1>
+                <p className='price'>Price: ${itemDetails.Price}</p>
+                <p>{itemDetails.Department}</p>
+                <p>{itemDetails.Type}</p>
+                <p>{itemDetails.Description}</p>
             </div>
         </div>
     )
