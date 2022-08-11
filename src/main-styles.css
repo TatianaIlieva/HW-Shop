@@ -227,6 +227,39 @@ footer {
 }
 /* #endregion Catalog */
 
+/* #region Filter */
+.input-wrapper {
+    margin: 1rem auto;
+    padding: 0 1em;
+    width: 1300px;
+    max-width: 100%;
+}
+
+.filter-select {
+    border-color: #ccc;
+    padding: 0.5rem;
+    width: 12rem;
+    max-width: 100%;
+    height: 1rem;
+    border-radius: 0;
+    box-sizing: content-box;
+}
+/* #endregion Filter */
+
+/* #region Search Bar */ 
+.searchbar {
+    margin-left: 2rem;
+    border: 1px solid #ccc;
+    padding: 0.5rem;
+    width: 12rem;
+    height: 1rem;
+    max-width: 100%;
+    color: #000;
+    border-radius: 0;
+    box-sizing: content-box;
+}
+/* #endregion Search Bar */
+
 /* #region Details Page */
 .details-wrapper {
     display: flex;
